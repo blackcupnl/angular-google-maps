@@ -171,7 +171,6 @@ angular.module('uiGmapgoogle-maps.directives.api.models.parent')
                   #add all adds via creating new ChildMarkers which are appended to @markers
                   _async.each payload.adds, (modelToAdd) =>
                     gMarker = @getItem(scope, modelsPropToIterate, modelToAdd[@idKey])?.gObject
-                    throw 'Gmarker undefined' unless gMarker
                     @createWindow(modelToAdd, gMarker, @gMap)
                     maybeCanceled
                 .then =>

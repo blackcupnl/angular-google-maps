@@ -1,4 +1,4 @@
-/*! angular-google-maps 2.3.3 2016-06-03
+/*! angular-google-maps 2.3.3 2016-08-05
  *  AngularJS directives for Google Maps
  *  git: https://github.com/angular-ui/angular-google-maps.git
  */
@@ -5920,9 +5920,6 @@ Original idea from: http://stackoverflow.com/questions/22758950/google-map-drawi
                   return _async.each(payload.adds, function(modelToAdd) {
                     var gMarker, ref;
                     gMarker = (ref = _this.getItem(scope, modelsPropToIterate, modelToAdd[_this.idKey])) != null ? ref.gObject : void 0;
-                    if (!gMarker) {
-                      throw 'Gmarker undefined';
-                    }
                     _this.createWindow(modelToAdd, gMarker, _this.gMap);
                     return maybeCanceled;
                   });
